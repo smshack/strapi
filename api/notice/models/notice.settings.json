@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notices",
+  "info": {
+    "name": "notice"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "notice"
+    },
+    "content": {
+      "type": "text"
+    },
+    "comment": {
+      "type": "json"
+    }
+  }
+}

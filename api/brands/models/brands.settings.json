@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "brands",
+  "info": {
+    "name": "brands"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "payment": {
+      "type": "json"
+    },
+    "options": {
+      "type": "json"
+    },
+    "optionGroups": {
+      "type": "json"
+    },
+    "menus": {
+      "type": "json"
+    },
+    "menuGroups": {
+      "type": "json"
+    },
+    "kioskId": {
+      "type": "string"
+    },
+    "chatbot": {
+      "type": "string"
+    },
+    "brandId": {
+      "type": "string"
+    },
+    "storeId": {
+      "type": "string"
+    },
+    "storeName": {
+      "type": "string"
+    }
+  }
+}

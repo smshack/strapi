@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "instructors",
+  "info": {
+    "name": "instructor",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "hopecategory": {
+      "type": "string"
+    },
+    "intro": {
+      "type": "text"
+    },
+    "photo": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "courses": {
+      "via": "instructor",
+      "collection": "course"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "instructors"
+    }
+  }
+}
